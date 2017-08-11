@@ -1,0 +1,30 @@
+version: "2"
+services:
+  wordpress:
+#    image: wordpress:latest
+    build: ./template
+#    ports:
+#      - "8888:80"
+    depends_on:
+      - db
+    environment:
+      WORDPRESS_DB_HOST: "db:3306"
+    networks:
+      - flat-network
+    env_file: .env
+    volumes:
+      - ./themes/layerswp:/var/www/html/wp-content/themes/layerswp
+  db:
+    image: mysql:5.7
+    volumes:
+      - "db-data:/var/lib/mysql"
+    networks:
+      - flat-network
+    env_file: .env
+volumes:
+  db-data:
+networks:
+  flat-network:
+  default:
+    external:
+       name: nginxproxy_default
