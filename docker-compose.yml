@@ -1,10 +1,12 @@
 version: "2"
 services:
   wordpress:
-#    image: wordpress:latest
-    build: ./template
-#    ports:
-#      - "8888:80"
+    image: wordpress:latest
+#    image: wordpress:php7.0-fpm-alpine
+#    build: ./template
+    container_name: corporate
+    ports:
+      - "8880:80"
     depends_on:
       - db
     environment:
@@ -14,8 +16,11 @@ services:
     env_file: .env
     volumes:
       - ./themes/layerswp:/var/www/html/wp-content/themes/layerswp
+      - plugins:/var/www/html/wp-content/plugins
+      - ./php.ini:/usr/local/etc/php/php.ini
   db:
     image: mysql:5.7
+    container_name: mysql
     volumes:
       - "db-data:/var/lib/mysql"
     networks:
@@ -23,8 +28,9 @@ services:
     env_file: .env
 volumes:
   db-data:
+  plugins:
 networks:
   flat-network:
-  default:
-    external:
-       name: nginxproxy_default
+#  default:
+#    external:
+#       name: nginxproxy_default
