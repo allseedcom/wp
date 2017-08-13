@@ -2,17 +2,17 @@ version: "2"
 services:
   wordpress:
     image: wordpress:latest
-#    image: wordpress:php7.0-fpm-alpine
-#    build: ./template
     container_name: corporate
-    ports:
-      - "8880:80"
+    expose:
+      - "443"
+      - "80"
     depends_on:
       - db
     environment:
       WORDPRESS_DB_HOST: "db:3306"
     networks:
       - flat-network
+      - default
     env_file: .env
     volumes:
       - ./themes/layerswp:/var/www/html/wp-content/themes/layerswp
@@ -25,12 +25,13 @@ services:
       - "db-data:/var/lib/mysql"
     networks:
       - flat-network
+      - default
     env_file: .env
 volumes:
   db-data:
   plugins:
 networks:
   flat-network:
-#  default:
-#    external:
-#       name: nginxproxy_default
+  default:
+    external:
+       name: nginxproxy_default
