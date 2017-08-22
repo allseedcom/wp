@@ -9,6 +9,7 @@ services:
       WORDPRESS_DB_HOST: "db:3306"
     networks:
       - flat-network
+      - default
     env_file: .env
     volumes:
       - ./themes/allseed:/var/www/html/wp-content/themes/allseed
@@ -21,12 +22,13 @@ services:
       - "as-corp-db-data:/var/lib/mysql"
     networks:
       - flat-network
+      - default
     env_file: .env
 volumes:
   as-corp-db-data:
   plugins:
 networks:
   flat-network:
-#  default:
-#    external:
-#       name: nginxproxy_default
+  default:
+    external:
+       name: nginxproxy_default
