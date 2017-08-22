@@ -1,2 +1,1 @@
-# wp
-docker-compose wp
+# ALLSEED corporatesite base

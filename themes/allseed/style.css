@@ -1,0 +1,742 @@
+/*
+Theme Name: ALLSEED
+Theme URI: http://wordpress.org/themes/twentytwelve
+Author: the WordPress team
+Author URI: http://wordpress.org/
+Description: The 2012 theme for WordPress is a fully responsive theme that looks great on any device. Features include a front page template with its own widgets, an optional display font, styling for post formats on both index and single views, and an optional no-sidebar page template. Make it yours with a custom menu, header image, and background.
+Version: 1.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, gray, white, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: twentytwelve
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@charset "utf-8";
+body{
+	font-size: 14px; メイリオ, Meiryo, Osaka, “ヒラギノ角ゴ Pro W3″, “Hiragino Kaku Gothic Pro”, “ＭＳ Ｐゴシック”, “MS PGothic”, sans-serif !important;
+
+}
+
+header {
+/* 	background-color: #FFF; */
+	padding: 20px;
+	padding-top:0px;
+	padding-bottom:0px;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+18&amp;1+0,0+100 */
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0.82) 18%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(18%,rgba(255,255,255,0.82)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.82) 18%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.82) 18%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.82) 18%,rgba(255,255,255,0) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0.82) 18%,rgba(255,255,255,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary{
+display:block;
+}
+
+h1{
+	float:left;	
+}
+#page h1{
+	float:none;
+}
+
+#page .row img{
+	width: 100%;	
+}
+
+#company table{
+	border-left: #666 solid 1px;
+	border-top: #666 solid 1px;
+	width: 100%;	
+}
+
+.t-none{
+	border:0px solid black;
+	margin:0px;
+	padding:0px;
+}
+#company th{
+	text-align:center;
+}
+#company th,#company td{
+	border-right: #666 solid 1px;
+	border-bottom: #666 solid 1px;
+	padding-left :5px;
+	padding-right :5px;
+	padding-top:20px;
+	padding-bottom: 20px;
+}
+
+#recruit table{
+	border-left: #666 solid 1px;
+	border-top: #666 solid 1px;
+	width: 100%;	
+}
+
+#recruit th{
+	width:30%;
+}
+#recruit th,#recruit td{
+	border-right: #666 solid 1px;
+	border-bottom: #666 solid 1px;
+	vertical-align:top;
+	padding-left :5px;
+	padding-right :5px;
+	padding-top:10px;
+	padding-bottom: 10px;
+}
+
+#history table{
+	border-left: #666 solid 1px;
+	border-top: #666 solid 1px;
+	width: 100%;	
+}
+
+#history th{
+	width:30%;
+}
+#history th,#history td{
+	border-right: #666 solid 1px;
+	border-bottom: #666 solid 1px;
+	vertical-align:top;
+	padding-left :5px;
+	padding-right :5px;
+	padding-top:10px;
+	padding-bottom: 10px;
+}
+
+header nav{
+	float: right;
+	//background-color: #c50000;
+	padding-top: 10px;
+	margin-top: 30px;
+	border-radius: 3px;        /* CSS3草案 */  
+ -webkit-border-radius: 3px;    /* Safari,Google Chrome用 */  
+   -moz-border-radius: 3px;   /* Firefox用 */  
+}
+
+header .container{
+	padding-bottom:0px;
+	margin-bottom:15px;
+}
+
+body header nav ul li a{
+	color: #FFF;	
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+body header nav ul li a:hover{
+	color: #CCC;	
+}
+
+header nav ul li{
+	display: inline;
+	padding-left:2px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+header nav{
+text-align: right;
+}
+
+.mtpv{
+	margin-top: 21px;
+}
+
+.mtsf{
+	margin-top: 10px
+}
+
+.mtfb{
+	margin-top: 20px;
+}
+
+.mt30{
+	margin-top: 30px;
+}
+
+.mt10p{
+	margin-top:10%;
+}
+
+.mt15{
+	margin-top: 15px;
+}
+
+.mt20{
+	margin-top: 20px;
+}
+
+.mt20p{
+	margin-top: 20%;
+}
+
+.mt10{
+	margin-top: 10px;
+}
+
+.mt8{
+	margin-top: 8px;
+}
+
+.c_center img{
+padding-top: 10%;
+}
+
+
+footer {
+/* 旧フッター 	background-color: #b00000; */
+/* 	padding: 20px; */
+/* 	margin-top: 15px; */
+padding: 20px;
+margin-top: 15px;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ca1e00+0,a81600+30,781200+50,781200+77 */
+background: rgb(202,30,0); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(202,30,0,1) 0%, rgba(168,22,0,1) 30%, rgba(120,18,0,1) 50%, rgba(120,18,0,1) 77%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(202,30,0,1)), color-stop(30%,rgba(168,22,0,1)), color-stop(50%,rgba(120,18,0,1)), color-stop(77%,rgba(120,18,0,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(202,30,0,1) 0%,rgba(168,22,0,1) 30%,rgba(120,18,0,1) 50%,rgba(120,18,0,1) 77%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(202,30,0,1) 0%,rgba(168,22,0,1) 30%,rgba(120,18,0,1) 50%,rgba(120,18,0,1) 77%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(202,30,0,1) 0%,rgba(168,22,0,1) 30%,rgba(120,18,0,1) 50%,rgba(120,18,0,1) 77%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(202,30,0,1) 0%,rgba(168,22,0,1) 30%,rgba(120,18,0,1) 50%,rgba(120,18,0,1) 77%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ca1e00', endColorstr='#781200',GradientType=0 ); /* IE6-9 */
+}
+
+.clear{
+	clear: both;	
+}
+
+body footer ul li {
+	display: inline;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+body footer nav{
+	margin-top: 20px;
+	margin-left: 150px;	
+}
+
+body footer nav ul li {
+	display: inline;
+	padding-left: 30px;
+	padding-right: 10px;
+	border-left: 1px solid #FFF;
+}
+
+body footer nav ul li a{
+	color: #FFF;
+	font-weight: bold;	
+}
+
+
+body footer nav ul li a:hover{
+	color:#CCC;
+}
+
+.last_f_menu{
+	border-right: 1px solid #FFF;
+	padding-right: 30px;
+}
+
+#f_social{
+	text-align: center;	
+}
+.container .f_logo {
+	float: left;
+}
+
+#copyright{
+	color :#FFF;
+	text-align: center;
+}
+#environment{
+	color :#FFF;
+	text-align: center;
+	font-size:10px;メイリオ, Meiryo, Osaka, “ヒラギノ角ゴ Pro W3″, “Hiragino Kaku Gothic Pro”, “ＭＳ Ｐゴシック”, “MS PGothic”, sans-serif;
+}
+
+.fleft50{
+	float: left;
+	width: 40%;	
+}
+
+.fright50{
+	float: right;
+	width: 40%;	
+}
+
+
+.fleft50_2{
+	float: left;
+	width: 48%;	
+}
+
+.fright50_2{
+	float: right;
+	width: 48%;	
+}
+
+iframe,
+.fbcomments,
+.fb_iframe_widget,
+.fb_iframe_widget[style],
+.fb_iframe_widget iframe[style],
+.fbcomments iframe[style],
+.fb_iframe_widget span{
+    width:98% !important;
+}
+
+
+.mtb20{
+	margin-top: 20px;
+	margin-bottom: 20px;	
+}
+
+.box{
+	border: 1px solid #666;
+	font-size: 12px;
+	color: #FFF;
+	padding:2px;
+	border-radius: 5px;        /* CSS3草案 */  
+ -webkit-border-radius: 5px;    /* Safari,Google Chrome用 */  
+   -moz-border-radius: 5px;   /* Firefox用 */  
+	
+}
+
+.box img{
+	border-radius: 5px;        /* CSS3草案 */  
+ -webkit-border-radius: 5px;    /* Safari,Google Chrome用 */  
+   -moz-border-radius: 5px;   /* Firefox用 */ 
+}
+
+.box2{
+	border: 1px solid #666;
+	font-size: 12px;
+	background-color: #00238C;
+	color: #FFF;
+}
+
+.box2 img{
+	width: 100%;	
+}
+
+
+.box img{
+	width: 100%;
+
+}
+
+
+.box3{
+	border: 1px solid #666;
+	font-size: 12px;
+	background-color: #00238C;
+	color: #FFF;
+	
+}
+
+.box3 img{
+	width: 48%;
+	padding-left: 1%;
+	float:right	;
+}
+
+.box p,.box2 p,.box3 p{
+	padding:3%;
+}
+
+.title{
+	font-size: 18px;
+	font-weight: bold;
+	color: 
+}
+
+
+@media screen and (max-width: 768px) { 
+
+header nav{
+	display: none;
+}
+
+.fleft50,.fleft50_2{
+	float: none;
+	width: 100%;
+ }
+
+.fleft50 iframe{
+	width: 100%;	
+}
+
+.fright50,fright50_2{
+	float: none;
+	width: 100%;
+}
+
+
+body footer nav{
+	margin-top: 20px;
+	margin-left: 10px;	
+}
+
+body footer nav ul li{
+	margin:0;
+	padding: 0;
+	border: none;	
+}
+
+.last_f_menu{
+	border-right: none;
+}
+
+} 
+
+.mt30{
+	margin-top: 30px;
+}
+
+.mb50{
+	margin-bottom: 50px;
+}
+
+.mb10{
+	margin-bottom: 10px;
+}
+
+#page footer nav ul li {
+    padding-bottom: 0px;
+}
+
+#company table th{
+	background-color: #c50000;
+	color: #FFF;
+}
+
+.mb20{
+	margin-bottom: 20px;
+}
+
+.mt40{
+	margin-top: 40px;
+}
+
+.mt50{
+	margin-top: 50px;
+}
+
+#itservice{
+	padding:20px;
+}
+
+#company{
+	padding:20px;
+	padding-top: 0px;
+}
+
+#recruit{
+	padding:20px;
+}
+#history{
+	padding:0px;
+}
+
+#web_contents{
+padding:20px;
+padding-top: 0px;
+}
+
+#top_news ul li{
+	list-type-style: none;
+}
+.contact{
+	padding-left:20px;
+}
+.text-align-center{
+	text-align: center;
+}
+.contact-name{
+	width:150px;
+}
+.contact-mail{
+	width:300px;
+}
+.contact-tel{
+	width:150px;
+}
+.contact-subject{
+	width:500px;
+}
+.contact-note{
+	width:500px;
+}
+.bb5{
+	border-bottom:5px solid #c50000;
+}
+.top-icon {
+	text-align:right;
+	margin-top:10px;
+}
+.top-icon ul li {
+	display: inline;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.border_radius {
+    border-radius: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 20px;
+}
+
+@font-face {
+  font-family: "LigatureSymbols";
+  src: url("../font/LigatureSymbols-2.11.eot");
+  src: url("../font/LigatureSymbols-2.11.eot?#iefix") format("embedded-opentype"),
+           url("../font/LigatureSymbols-2.11.woff") format("woff"),
+           url("../font/LigatureSymbols-2.11.ttf") format("truetype"),
+           url("../font/LigatureSymbols-2.11.svg#LigatureSymbols") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-font {
+  font-family: "LigatureSymbols";
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga"1, "dlig"1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga"1, "dlig"1;
+  -o-font-feature-settings: "liga"1, "dlig"1;
+  font-feature-settings: "liga"1, "dlig"1;
+}
+
+/*------------------------------------------
+// User style start
+// change
+----------------------------------------- */
+
+.general-button  {
+  border-radius: 4px;
+  background-color: #e23131;
+}
+
+.general-button:before  {
+  border-radius: 4px;
+  border-bottom: 0px solid rgba(200,28,28, 0);
+  background-color: rgba(200,28,28, 0);
+}
+
+.button-content  {
+  border-radius: 0px 0px 4px 4px;
+  padding: 6px 7.5px;
+  box-shadow: 0px 0px 0px 0px rgba(200,28,28, 0);
+  color: #f8f8f8;
+}
+
+.button-text  {
+  padding: 0px 7.5px;
+  line-height: 1em;
+  font-size: 16px;
+}
+
+.icon-font  {
+  padding: 0px 7.5px;
+  font-size: 10px;
+}
+
+/*----------------- at hover -----------------*/
+
+.general-button:hover  {
+  top: -9px;
+  transition: all 92ms;
+  -moz-transition: all 92ms;
+  -webkit-transition: all 92ms;
+  -o-transition: all 92ms;
+  background-color: #e33e3e;
+}
+
+.general-button:hover:before  {
+  border-bottom: 9px solid rgba(200,28,28, 0);
+  transition: all 92ms;
+  -moz-transition: all 92ms;
+  -webkit-transition: all 92ms;
+  -o-transition: all 92ms;
+}
+
+.general-button:hover .button-content  {
+  box-shadow: 0px 9px 0px 0px rgba(200,28,28, 1);
+  transition: all 92ms;
+  -moz-transition: all 92ms;
+  -webkit-transition: all 92ms;
+  -o-transition: all 92ms;
+}
+
+/*----------------- at active -----------------*/
+
+.general-button:active  {
+  background-color: #da1e1e;
+  box-shadow: 0px 2.8px 0px 0px rgba(178,25,25, 1) inset;
+}
+
+.general-button:active:before  {
+  top: -9px;
+  padding-bottom: 9px;
+  border-bottom: 0px solid rgba(200,28,28, 0);
+}
+
+.general-button:active .button-content  {
+  box-shadow: 0px 0px 0px 0px rgba(200,28,28, 0);
+}
+
+/*------------------------------------------
+// User style end
+----------------------------------------- */
+
+/*------------------------------------------
+// Core style start
+// not change
+----------------------------------------- */
+
+.general-button  {
+  display: -moz-inline-box;
+  display: inline-block;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;transition: all 0ms;
+  -moz-transition: all 0ms;
+  -webkit-transition: all 0ms;
+  -o-transition: all 0ms;position: relative;
+  top: 0px;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.general-button:before  {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.button-content  {
+  display: table;
+  transition: all 0ms;
+  -moz-transition: all 0ms;
+  -webkit-transition: all 0ms;
+  -o-transition: all 0ms;
+}
+
+.button-text  {
+  display: table-cell;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+.icon-font  {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/*----------------- at hover -----------------*/
+
+.general-button:hover  {
+  transition-timing-function: ease-in-out;
+}
+
+.general-button:hover:before  {
+  transition-timing-function: ease-in-out;
+}
+
+.general-button:hover .button-content  {
+  transition-timing-function: ease-in-out;
+}
+
+/*----------------- at active -----------------*/
+
+.general-button:active  {
+  top: 0px;
+  transition: all 0ms;
+  -moz-transition: all 0ms;
+  -webkit-transition: all 0ms;
+  -o-transition: all 0ms;
+}
+
+.general-button:active:before  {
+  transition: all 0ms;
+  -moz-transition: all 0ms;
+  -webkit-transition: all 0ms;
+  -o-transition: all 0ms;
+}
+
+.general-button:active .button-content  {
+  transition: all 0ms;
+  -moz-transition: all 0ms;
+  -webkit-transition: all 0ms;
+  -o-transition: all 0ms;
+}
+
+/*------------------------------------------
+// Core style end
+----------------------------------------- */
+
+/*------------------------------------------
+// Touch style start
+----------------------------------------- */
+
+/*----------------- at hover -----------------*/
+
+.touch .general-button:hover  {
+  top: 0px;
+  background-color: #e23131;
+}
+
+.touch .general-button:hover:before  {
+  border-bottom: 0px solid rgba(200,28,28, 0);
+}
+
+.touch .general-button:hover .button-content  {
+  box-shadow: 0px 0px 0px 0px rgba(200,28,28, 1);
+
+}
+
+/*----------------- at active -----------------*/
+
+.touch .general-button:active  {
+  background-color: #da1e1e;
+  box-shadow: 0px 0px 0px 0px rgba(200,28,28, 0) inset;
+}
+
+.touch .general-button:active:before  {
+  top: -9px;
+  padding-bottom: 9px;
+  border-bottom: 0px solid rgba(200,28,28, 0);
+}
+
+.touch .general-button:active .button-content  {
+  box-shadow: 0px 0px 0px 0px rgba(200,28,28, 0);
+}
+
+/*------------------------------------------
+// Touch style end
+----------------------------------------- */
