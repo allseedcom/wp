@@ -2,11 +2,7 @@ version: "2"
 services:
   wordpress:
     image: wordpress:latest
-#    image: wordpress:php7.0-fpm-alpine
-#    build: ./template
     container_name: corporate
-    ports:
-      - "8880:80"
     depends_on:
       - db
     environment:
@@ -15,19 +11,19 @@ services:
       - flat-network
     env_file: .env
     volumes:
-      - ./themes/layerswp:/var/www/html/wp-content/themes/layerswp
+      - ./themes/allseed:/var/www/html/wp-content/themes/allseed
       - plugins:/var/www/html/wp-content/plugins
       - ./php.ini:/usr/local/etc/php/php.ini
   db:
     image: mysql:5.7
     container_name: mysql
     volumes:
-      - "db-data:/var/lib/mysql"
+      - "as-corp-db-data:/var/lib/mysql"
     networks:
       - flat-network
     env_file: .env
 volumes:
-  db-data:
+  as-corp-db-data:
   plugins:
 networks:
   flat-network:
